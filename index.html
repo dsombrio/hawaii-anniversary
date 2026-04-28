@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hawaii Anniversary — David &amp; Moriah</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #faf6ee;
+    --cream-dark: #f0e8d8;
+    --navy: #1a2e4a;
+    --navy-dark: #0d1a2b;
+    --gold: #c9a84c;
+    --gold-light: #e8c96a;
+    --coral: #e07850;
+    --teal: #2a7a6e;
+    --text: #2c2c2c;
+    --text-light: #666;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(180deg, #1a2e4a 0%, #2a4a6a 60%, #c9a84c 100%);
+    color: white;
+    text-align: center;
+    padding: 1.2in 0.5in 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 5in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=80') center/cover no-repeat;
+    opacity: 0.18;
+  }
+
+  .hero-content { position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-block;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.15in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    padding: 0.08in 0.3in;
+    margin-bottom: 0.3in;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2in;
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    margin-bottom: 0.2in;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.4);
+  }
+
+  .hero h1 em {
+    color: var(--gold-light);
+    font-style: italic;
+  }
+
+  .hero .tagline {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.26in;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 0.1in;
+  }
+
+  .hero .couple {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.18in;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.5in;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0.6in;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat { text-align: center; }
+  .hero-stat .val {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.55in;
+    font-weight: 700;
+    color: var(--gold-light);
+    display: block;
+  }
+  .hero-stat .lbl {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.11in;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-cta {
+    margin-top: 0.5in;
+    display: flex;
+    gap: 0.2in;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.15in 0.35in;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.14in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+  }
+
+  .btn-gold {
+    background: var(--gold);
+    color: var(--navy-dark);
+  }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+  }
+  .btn-outline:hover { background: rgba(201,168,76,0.1); transform: translateY(-2px); }
+
+  /* PINE DIVIDER */
+  .pine-divider {
+    text-align: center;
+    font-size: 0.4in;
+    color: var(--gold);
+    letter-spacing: 0.3em;
+    padding: 0.2in 0;
+    background: var(--navy-dark);
+  }
+
+  /* INTRO */
+  .intro {
+    background: var(--navy);
+    color: white;
+    padding: 0.6in 0.5in;
+    text-align: center;
+  }
+
+  .intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.6in;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 0.2in;
+  }
+
+  .intro p {
+    font-size: 0.18in;
+    color: rgba(255,255,255,0.75);
+    max-width: 10in;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* NAV TABS */
+  .trip-tabs {
+    display: flex;
+    background: var(--cream-dark);
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .trip-tab {
+    flex: 1;
+    padding: 0.18in 0.15in;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.12in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .trip-tab:hover, .trip-tab.active {
+    background: var(--navy);
+    color: var(--gold);
+  }
+
+  /* SECTIONS */
+  .section { padding: 0.6in 0.4in; }
+  .section:nth-child(even) { background: var(--cream-dark); }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 0.45in;
+  }
+  .section-header .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.12in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 0.08in;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.6in;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+
+  /* OPTION CARDS */
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.35in;
+    max-width: 15in;
+    margin: 0 auto;
+  }
+
+  .option-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 40px rgba(0,0,0,0.12);
+  }
+
+  .option-header {
+    padding: 0.35in 0.3in 0.3in;
+    text-align: center;
+  }
+  .option-header.opt-a { background: var(--navy); color: white; }
+  .option-header.opt-b { background: var(--teal); color: white; }
+
+  .option-header .opt-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.11in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.65;
+    margin-bottom: 0.05in;
+  }
+
+  .option-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.45in;
+    font-weight: 700;
+    margin-bottom: 0.08in;
+  }
+
+  .option-header .opt-sub {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 0.15in;
+    opacity: 0.8;
+  }
+
+  .option-img {
+    width: 100%;
+    height: 2.5in;
+    object-fit: cover;
+    display: block;
+  }
+
+  .option-body { padding: 0.3in; }
+
+  /* BUDGET BOX */
+  .budget-box {
+    background: var(--cream);
+    border-radius: 12px;
+    padding: 0.25in;
+    margin-bottom: 0.25in;
+    text-align: center;
+    border: 1px solid var(--cream-dark);
+  }
+  .budget-box .amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.75in;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .budget-box .per-person {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.11in;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .budget-breakdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.06in;
+    margin-top: 0.12in;
+  }
+  .budget-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.12in;
+    padding: 0.05in 0.1in;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+  .budget-item .lbl { color: var(--text-light); }
+  .budget-item .val { font-weight: 700; color: var(--navy); }
+  .budget-note {
+    font-size: 0.1in;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 0.1in;
+    text-align: center;
+  }
+
+  /* HOTEL INFO */
+  .hotel-info {
+    display: flex;
+    gap: 0.2in;
+    align-items: flex-start;
+    margin-bottom: 0.2in;
+    background: var(--cream);
+    border-radius: 10px;
+    padding: 0.2in;
+  }
+  .hotel-icon { font-size: 0.55in; flex-shrink: 0; }
+  .hotel-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.22in;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.04in;
+  }
+  .hotel-stars { color: var(--gold); font-size: 0.14in; margin-bottom: 0.06in; }
+  .hotel-desc { font-size: 0.13in; color: var(--text-light); line-height: 1.5; }
+  .hotel-perks {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.05in;
+    margin-top: 0.1in;
+  }
+  .hotel-perks li {
+    background: var(--cream-dark);
+    border-radius: 20px;
+    padding: 0.03in 0.1in;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.1in;
+    font-weight: 600;
+    color: var(--navy);
+  }
+
+  .option-link {
+    display: inline-block;
+    margin-bottom: 0.2in;
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.11in;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+  .option-link:hover { color: var(--gold-light); }
+
+  /* DAY ITINERARY */
+  .day-by-day { margin-top: 0.2in; }
+
+  .day {
+    display: flex;
+    gap: 0;
+    margin-bottom: 0.18in;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+
+  .day-num {
+    background: var(--navy);
+    color: var(--gold);
+    min-width: 0.85in;
+    text-align: center;
+    padding: 0.2in 0.1in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .day-num .label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.08in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.4);
+  }
+  .day-num .num {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.45in;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--gold-light);
+  }
+  .day-num .month {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.09in;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: rgba(255,255,255,0.55);
+  }
+
+  .day-content {
+    padding: 0.18in 0.2in 0.18in 0;
+    flex: 1;
+  }
+
+  .day-content h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.18in;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.06in;
+  }
+
+  .day-activities {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.05in;
+    margin-bottom: 0.06in;
+  }
+  .day-activities li {
+    background: var(--cream);
+    border-radius: 6px;
+    padding: 0.03in 0.1in;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.1in;
+    font-weight: 600;
+    color: var(--navy);
+  }
+  .day-activities li.must {
+    background: var(--gold-light);
+    color: var(--navy-dark);
+  }
+
+  .day-notes {
+    font-size: 0.12in;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.4;
+  }
+  .day-notes strong { color: var(--navy); font-style: normal; }
+
+  /* MAI TAI SECTION */
+  .mai-tai-section {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, #1a3a5c 100%);
+    padding: 0.6in 0.4in;
+    text-align: center;
+  }
+  .mai-tai-section .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.12in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    margin-bottom: 0.1in;
+  }
+  .mai-tai-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.75in;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 0.1in;
+  }
+  .mai-tai-section h2 em { color: var(--gold-light); font-style: italic; }
+
+  .mai-tai-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.2in;
+    max-width: 14in;
+    margin: 0.35in auto 0;
+  }
+
+  .mai-tai-card {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 12px;
+    padding: 0.25in 0.2in;
+    text-align: center;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .mai-tai-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+  }
+  .mai-tai-card .bar {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.19in;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 0.04in;
+  }
+  .mai-tai-card .location {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.1in;
+    color: rgba(255,255,255,0.45);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.1in;
+  }
+  .mai-tai-card .desc {
+    font-size: 0.12in;
+    color: rgba(255,255,255,0.7);
+    font-style: italic;
+    line-height: 1.45;
+  }
+  .mai-tai-card .price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.12in;
+    font-weight: 700;
+    color: var(--gold);
+    margin-top: 0.08in;
+  }
+
+  /* VINTAGE NOTE */
+  .vintage-note {
+    background: var(--cream-dark);
+    border-top: 4px solid var(--gold);
+    border-bottom: 4px solid var(--gold);
+    padding: 0.45in 0.5in;
+    text-align: center;
+  }
+  .vintage-note h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.45in;
+    font-style: italic;
+    color: var(--navy);
+    margin-bottom: 0.15in;
+  }
+  .vintage-note p {
+    font-size: 0.15in;
+    color: var(--text-light);
+    max-width: 10in;
+    margin: 0 auto;
+    line-height: 1.65;
+  }
+
+  /* PROS CONS */
+  .pros-cons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.25in;
+    max-width: 14in;
+    margin: 0 auto;
+  }
+  .pc-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.15in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.12in;
+  }
+  .pc-col.pros h4 { color: var(--teal); }
+  .pc-col.cons h4 { color: var(--coral); }
+  .pc-list {
+    list-style: none;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  }
+  .pc-list li {
+    padding: 0.1in 0.18in;
+    font-size: 0.13in;
+    border-bottom: 1px solid var(--cream-dark);
+    display: flex;
+    gap: 0.08in;
+    align-items: flex-start;
+  }
+  .pc-list li:last-child { border-bottom: none; }
+  .pros .pc-list li { color: var(--teal); }
+  .cons .pc-list li { color: var(--coral); }
+
+  /* BUDGET TABLE */
+  .budget-table-wrap {
+    max-width: 12in;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+  }
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.14in;
+  }
+  .budget-table th {
+    background: var(--navy);
+    color: white;
+    padding: 0.15in 0.2in;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.12in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .budget-table th:nth-child(2),
+  .budget-table th:nth-child(3) { text-align: center; }
+  .budget-table td {
+    padding: 0.1in 0.2in;
+    border-bottom: 1px solid var(--cream-dark);
+  }
+  .budget-table td:nth-child(2),
+  .budget-table td:nth-child(3) { text-align: center; }
+  .budget-table tr:nth-child(even) td { background: #faf7f2; }
+  .budget-table tr:last-child td { border-bottom: none; }
+  .budget-table .total-row td {
+    background: var(--cream-dark);
+    font-weight: 800;
+    font-size: 0.16in;
+    color: var(--navy);
+    padding: 0.15in 0.2in;
+  }
+
+  /* PACKING */
+  .packing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.25in;
+    max-width: 12in;
+    margin: 0 auto;
+  }
+  .packing-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.13in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    margin-bottom: 0.12in;
+    padding-bottom: 0.06in;
+    border-bottom: 2px solid var(--gold);
+  }
+  .packing-col ul { list-style: none; }
+  .packing-col ul li {
+    font-size: 0.13in;
+    padding: 0.06in 0;
+    color: var(--text);
+    border-bottom: 1px solid var(--cream-dark);
+    display: flex;
+    gap: 0.06in;
+    align-items: center;
+  }
+  .packing-col ul li:last-child { border-bottom: none; }
+
+  /* RECOMMENDATION */
+  .recommendation {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 0.6in 0.4in;
+  }
+  .recommendation .eyebrow {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.12in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 0.15in;
+  }
+  .recommendation h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.65in;
+    font-weight: 700;
+    color: var(--gold-light);
+    margin-bottom: 0.2in;
+    line-height: 1.2;
+  }
+  .recommendation p {
+    font-size: 0.17in;
+    color: rgba(255,255,255,0.7);
+    max-width: 9in;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.35);
+    text-align: center;
+    padding: 0.3in;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.1in;
+  }
+
+  /* SCROLL TO TOP */
+  .scroll-top {
+    position: fixed;
+    bottom: 0.3in;
+    right: 0.3in;
+    width: 0.5in;
+    height: 0.5in;
+    background: var(--navy);
+    color: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.2in;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 200;
+  }
+  .scroll-top.visible { opacity: 1; }
+  .scroll-top:hover { background: var(--navy-dark); }
+
+  /* WHY SEP OCT */
+  .why-box {
+    background: white;
+    border-radius: 12px;
+    padding: 0.3in;
+    margin-bottom: 0.3in;
+    border-left: 5px solid var(--gold);
+    max-width: 12in;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .why-box h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.13in;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--navy);
+    margin-bottom: 0.1in;
+  }
+  .why-box p { font-size: 0.13in; color: var(--text-light); line-height: 1.6; }
+
+  /* BUTTON TEST AREA */
+  .btn-test {
+    background: #f5f0e8;
+    padding: 0.3in;
+    text-align: center;
+    border-top: 2px solid var(--gold);
+  }
+  .btn-test h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.13in;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--navy);
+    margin-bottom: 0.15in;
+  }
+  .btn-test .btn-group {
+    display: flex;
+    gap: 0.15in;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .options-grid { grid-template-columns: 1fr; }
+    .mai-tai-grid { grid-template-columns: 1fr 1fr; }
+    .pros-cons { grid-template-columns: 1fr; }
+    .packing-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: white; }
+    .trip-tabs { position: static; }
+    .scroll-top { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Anniversary Trip — September / October</div>
+    <h1>David &amp; Moriah's<br><em>Hawaiian Anniversary</em></h1>
+    <div class="tagline">7 days of aloha, Mai Thais, hula &amp; memories on Oahu</div>
+    <div class="couple">Celebrating [X] Years of Marriage</div>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="val">7</span><span class="lbl">Days</span></div>
+      <div class="hero-stat"><span class="val">Oahu</span><span class="lbl">Island</span></div>
+      <div class="hero-stat"><span class="val">Sep–Oct</span><span class="lbl">Best Season</span></div>
+      <div class="hero-stat"><span class="val">2</span><span class="lbl">Travelers</span></div>
+    </div>
+    <div class="hero-cta">
+      <a href="#option-a" class="btn btn-gold">Option A — Resort</a>
+      <a href="#option-b" class="btn btn-outline">Option B — Hotel + Restaurants</a>
+      <a href="#maitais" class="btn btn-outline">Mai Tai Trail</a>
+    </div>
+  </div>
+</div>
+
+<div class="pine-divider">&#x1F34D; &#x1F34D; &#x1F34D;</div>
+
+<!-- INTRO -->
+<div class="intro">
+  <h2>The Hawaii of Your Imagination</h2>
+  <p>This is Waikiki's golden era — when Don Ho was playing every night, when a Mai Tai at the Royal Hawaiian was the most romantic thing you could do in America. This itinerary channels that timeless feeling: private luaus under the stars, the best Mai Thais on the island, hula at sunset, and the best food Oahu has to offer.</p>
+</div>
+
+<!-- TABS -->
+<div class="trip-tabs">
+  <a href="#overview"    class="trip-tab active" onclick="activateTab(this)">Overview</a>
+  <a href="#option-a"   class="trip-tab"          onclick="activateTab(this)">Option A — Resort</a>
+  <a href="#option-b"   class="trip-tab"          onclick="activateTab(this)">Option B — Hotel</a>
+  <a href="#maitais"    class="trip-tab"          onclick="activateTab(this)">Mai Tai Trail</a>
+  <a href="#details"    class="trip-tab"          onclick="activateTab(this)">Budget &amp; Details</a>
+</div>
+
+<!-- OVERVIEW -->
+<div class="section" id="overview">
+  <div class="section-header">
+    <div class="eyebrow">Two Ways to Go</div>
+    <h2>The Big Decision: Resort vs. Hotel + Restaurants</h2>
+  </div>
+  <div class="pros-cons">
+    <div class="pc-col pros">
+      <h4>All-Inclusive Resort — Option A</h4>
+      <ul class="pc-list">
+        <li>&#10003; One bill, no thinking at meals</li>
+        <li>&#10003; On-property luaus, hula shows, ukulele nights</li>
+        <li>&#10003; Beach chairs, kayaks, snorkel gear included</li>
+        <li>&#10003; Airport transfers pre-arranged</li>
+        <li>&#10003; House reef snorkeling at Halekulani</li>
+        <li>&#10003; Romance: everything in one place</li>
+      </ul>
+    </div>
+    <div class="pc-col cons">
+      <h4>Boutique Hotel + Restaurants — Option B</h4>
+      <ul class="pc-list">
+        <li>&#10003; Eat at the best restaurants on the island</li>
+        <li>&#10003; No repetitive resort buffet syndrome</li>
+        <li>&#10003; Authentic local food: poke, plate lunch, shave ice</li>
+        <li>&#10003; Freedom to explore beyond the resort bubble</li>
+        <li>&#10003; Refined luxury at Halekulani</li>
+        <li>&#10003; More adventurous, more local feel</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION A — RESORT -->
+<div class="section" id="option-a" style="background: #f0f4f8;">
+  <div class="section-header">
+    <div class="eyebrow">Option A — All-Inclusive Resort</div>
+    <h2>The Royal Hawaiian, a Luxury Collection Resort</h2>
+  </div>
+
+  <div class="options-grid">
+    <div class="option-card">
+      <div class="option-header opt-a">
+        <div class="opt-label">Option A</div>
+        <h3>The Royal Hawaiian</h3>
+        <div class="opt-sub">Waikiki — The Pink Palace of the Pacific</div>
+      </div>
+      <img class="option-img" src="https://images.unsplash.com/photo-1551871812-10ecc21ffa2f?w=900&q=80" alt="The Royal Hawaiian Waikiki" loading="lazy">
+      <div class="option-body">
+        <a class="option-link" href="https://www.royal-hawaiian.com" target="_blank">&#x2192; royal-hawaiian.com</a>
+
+        <div class="budget-box">
+          <div class="amount">$6,500</div>
+          <div class="per-person">per couple / 7 nights</div>
+          <div class="budget-breakdown">
+            <div class="budget-item"><span class="lbl">Room (Ocean Front)</span><span class="val">$3,400</span></div>
+            <div class="budget-item"><span class="lbl">Meals (all incl.)</span><span class="val">$1,800</span></div>
+            <div class="budget-item"><span class="lbl">Activities</span><span class="val">$700</span></div>
+            <div class="budget-item"><span class="lbl">Transfers + Tips</span><span class="val">$600</span></div>
+          </div>
+          <div class="budget-note">Flights from DFW/IAH: ~$700–$900/person (Sep/Oct)</div>
+        </div>
+
+        <div class="hotel-info">
+          <div class="hotel-icon">🏛️</div>
+          <div>
+            <div class="hotel-name">The Royal Hawaiian</div>
+            <div class="hotel-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <div class="hotel-desc">Built 1927 — the most iconic hotel in Waikiki. "The Pink Palace" sits on the best stretch of Waikiki Beach. Zero-entry lagoon, full-service spa, three restaurants, nightly Hawaiian entertainment on the lawn.</div>
+            <ul class="hotel-perks">
+              <li>Beachfront</li><li>Zero-Entry Lagoon</li><li>Luau on Property</li>
+              <li>Hula Shows</li><li>Ukulele Nights</li><li>House Reef</li>
+              <li>Full Spa</li><li>Airport Transfers</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="day-by-day">
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">1</span><span class="month">Mon</span></div>
+            <div class="            <div class="day-content">
+              <h4>✈️ Arrival in Honolulu</h4>
+              <ul class="day-activities">
+                <li>Arrive HNL, private car to Royal Hawaiian</li>
+                <li class="must">Welcome Mai Tai at the Mai Tai Bar (legendary, since 1954)</li>
+                <li>Sunset stroll on Waikiki Beach</li>
+                <li>Dinner: Azure at The Royal Hawaiian (fine dining, oceanfront)</li>
+              </ul>
+              <div class="day-notes"><strong>Tip:</strong> Request oceanfront room floors 6–8 for best Diamond Head balcony views.</div>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">2</span><span class="month">Tue</span></div>
+            <div class="day-content">
+              <h4>🌋 Diamond Head + Old Waikiki</h4>
+              <ul class="day-activities">
+                <li>Morning: Hike Diamond Head Crater (2 mi roundtrip, epic summit views)</li>
+                <li>Afternoon: Kalakaua Ave shopping, Kuhio Beach hula at sunset</li>
+                <li class="must">Evening: Mai Tai Bar at Royal Hawaiian — live Hawaiian music, tiki torches, 7–10pm nightly</li>
+              </ul>
+              <div class="day-notes">Don't miss the <strong>Torch Lighting Ceremony</strong> every evening at sunset on the beach.</div>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">3</span><span class="month">Wed</span></div>
+            <div class="day-content">
+              <h4>🌊 North Shore Adventure</h4>
+              <ul class="day-activities">
+                <li>Scenic Windward Coast drive (1 hr)</li>
+                <li class="must">Lunch: Giovanni's Shrimp Truck, Kahuku (legendary garlic shrimp)</li>
+                <li>Snorkel Shark's Cove or swim Waimea Bay</li>
+                <li>Shave ice at Matsumoto's, Haleiwa</li>
+                <li>Evening: Return to Waikiki, Mai Tai Bar</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">4</span><span class="month">Thu</span></div>
+            <div class="day-content">
+              <h4>🧺 Culture Day — Hula &amp; Luau</h4>
+              <ul class="day-activities">
+                <li>Morning: Ka Lei Lani — Ancient Hawaiian Culture Experience (lei making, hula lesson)</li>
+                <li>Explore Chinatown, Honolulu</li>
+                <li class="must">Evening: Germaine's Luau in Kapiolani Park — authentic Hawaiian show since 1971. Imu ceremony, fire dancing, hula, all-you-can-eat buffet.</li>
+              </ul>
+              <div class="day-notes">Germaine's is the last authentic old-school Waikiki luau. Wear an aloha shirt. Dance.</div>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">5</span><span class="month">Fri</span></div>
+            <div class="day-content">
+              <h4>⚓ Pearl Harbor + Relaxation</h4>
+              <ul class="day-activities">
+                <li class="must">Morning: Pearl Harbor Historic Sites — Arizona Memorial (reserve 2+ weeks early at recreation.gov)</li>
+                <li>Return to resort, afternoon at lagoon/pool</li>
+                <li class="must">Afternoon: Mai Tai Bar — Slack Key Guitar session</li>
+                <li>Dinner: Nobu Waikiki (legendary Japanese-Peruvian, walk from hotel)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">6</span><span class="month">Sat</span></div>
+            <div class="day-content">
+              <h4>⛵ Catamaran + Spa + Farewell Dinner</h4>
+              <ul class="day-activities">
+                <li class="must">Morning: Waianae Kai 2-hour Sail — snorkeling, BYOB, open bar</li>
+                <li>Afternoon: Couple's massage at Nalu Kinetic Spa</li>
+                <li class="must">Farewell dinner: Surf Lanai at Royal Hawaiian — Hawaiian regional cuisine, oceanfront, live music</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">7</span><span class="month">Sun</span></div>
+            <div class="day-content">
+              <h4>✈️ Departure</h4>
+              <ul class="day-activities">
+                <li>Final morning swim at Waikiki Beach</li>
+                <li class="must">Last Mai Tai at the Mai Tai Bar before departing</li>
+                <li>Private car to HNL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION B — HOTEL -->
+<div class="section" id="option-b" style="background: #f0f8f4;">
+  <div class="section-header">
+    <div class="eyebrow">Option B — Boutique Hotel + Restaurants</div>
+    <h2>Halekulani + The Best Food on Oahu</h2>
+  </div>
+
+  <div class="options-grid">
+    <div class="option-card">
+      <div class="option-header opt-b">
+        <div class="opt-label">Option B</div>
+        <h3>Halekulani</h3>
+        <div class="opt-sub">Waikiki — Refined Luxury, No Resort Fee</div>
+      </div>
+      <img class="option-img" src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80" alt="Halekulani Waikiki" loading="lazy">
+      <div class="option-body">
+        <a class="option-link" href="https://www.halekulani.com" target="_blank">&#x2192; halekulani.com</a>
+
+        <div class="budget-box">
+          <div class="amount">$5,200</div>
+          <div class="per-person">per couple / 7 nights</div>
+          <div class="budget-breakdown">
+            <div class="budget-item"><span class="lbl">Room (Diamond Head View)</span><span class="val">$2,400</span></div>
+            <div class="budget-item"><span class="lbl">Meals (restaurants)</span><span class="val">$1,600</span></div>
+            <div class="budget-item"><span class="lbl">Activities</span><span class="val">$700</span></div>
+            <div class="budget-item"><span class="lbl">Transfers + Tips</span><span class="val">$500</span></div>
+          </div>
+          <div class="budget-note">Flights from DFW/IAH: ~$700–$900/person (Sep/Oct)</div>
+        </div>
+
+        <div class="hotel-info">
+          <div class="hotel-icon">🏨</div>
+          <div>
+            <div class="hotel-name">Halekulani</div>
+            <div class="hotel-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+            <div class="hotel-desc">Opened 1907, completely rebuilt 2019. The most refined property in Waikiki — understated luxury, massive oceanfront lawn, the famous Cascade pool, and House Without a Key restaurant directly on the beach.</div>
+            <ul class="hotel-perks">
+              <li>Cascade Pool &amp; Lawn</li><li>House Without a Key</li>
+              <li>No Resort Fee</li><li>Beachfront</li>
+              <li>French-Japanese Fine Dining</li><li>Refined, Quiet</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="day-by-day">
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">1</span><span class="month">Mon</span></div>
+            <div class="day-content">
+              <h4>✈️ Arrival + Sunset Hula</h4>
+              <ul class="day-activities">
+                <li>Arrive HNL, rideshare to Halekulani (~$45)</li>
+                <li class="must">Sunset: House Without a Key — Halekulani's legendary beachfront restaurant. Cocktails, hula show at 6:30pm, tiki torches.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">2</span><span class="month">Tue</span></div>
+            <div class="day-content">
+              <h4>🌋 Diamond Head + Kaimuki</h4>
+              <ul class="day-activities">
+                <li>Morning: Diamond Head Crater hike</li>
+                <li>Afternoon: Kaimuki galleries &amp; coffee at Arvo</li>
+                <li class="must">Dinner: town — Modern Hawaiian cuisine, James Beard-nominated, farm-to-table. Book 2 weeks out.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">3</span><span class="month">Wed</span></div>
+            <div class="day-content">
+              <h4>🌊 North Shore Food Tour</h4>
+              <ul class="day-activities">
+                <li>Drive Windward Coast to North Shore</li>
+                <li class="must">Lunch: Giovanni's Shrimp Truck, Kahuku</li>
+                <li>Shave ice at Matsumoto's, Haleiwa</li>
+                <li>Snorkel Shark's Cove, sunset at Sunset Beach</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">4</span><span class="month">Thu</span></div>
+            <div class="day-content">
+              <h4>🧺 Culture Day</h4>
+              <ul class="day-activities">
+                <li class="must">Morning: Iolani Palace — the only royal palace in the US. Docent tour essential.</li>
+                <li>Afternoon: Chinatown — lunch at F Vietnamese Sandwiches</li>
+                <li class="must">Evening: Germaine's Luau (same as Option A)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">5</span><span class="month">Fri</span></div>
+            <div class="day-content">
+              <h4>🍹 Mai Tai Day + Beach</h4>
+              <ul class="day-activities">
+                <li>Morning: Relax at Waikiki Beach (Halekulani lawn extends to sand)</li>
+                <li class="must">Midday: Mai Tai at Cascade Pool Bar, Halekulani</li>
+                <li class="must">Afternoon: Mai Tai Bar at Royal Hawaiian — the definitive Waikiki Mai Tai, historic tiki bar, live music</li>
+                <li>Dinner: Mese for poke bowls (locals' choice, Dole Cannery)</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">6</span><span class="month">Sat</span></div>
+            <div class="day-content">
+              <h4>🐠 Hanauma Bay + Spa + Farewell</h4>
+              <ul class="day-activities">
+                <li class="must">Morning: Hanauma Bay — snorkel the famous reef. Go at 6:30am to beat crowds. Reserve parking or take TheBus.</li>
+                <li>Afternoon: Couple's massage at Nalu Kinetic Spa, Kailua</li>
+                <li class="must">Farewell dinner: Surf Lanai — oceanfront Hawaiian seafood, live music</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="day">
+            <div class="day-num"><span class="label">Day</span><span class="num">7</span><span class="month">Sun</span></div>
+            <div class="day-content">
+              <h4>✈️ Departure</h4>
+              <ul class="day-activities">
+                <li>Final swim at Waikiki Beach</li>
+                <li class="must">Last Mai Tai at House Without a Key</li>
+                <li>Rideshare to HNL</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MAI TAI SECTION -->
+<div class="mai-tai-section" id="maitais">
+  <div class="eyebrow">The Mai Tai Trail</div>
+  <h2>The Best Mai Thais in <em>Oahu</em></h2>
+
+  <div class="mai-tai-grid">
+    <div class="mai-tai-card">
+      <div class="bar">Royal Hawaiian Mai Tai Bar</div>
+      <div class="location">Waikiki — The Original</div>
+      <div class="desc">The Mai Tai was born here in 1954. The bar is a living museum — tiki torches, royal palms, the sound of ukuleles.</div>
+      <div class="price">~$18–$22 / Mai Tai &nbsp;|&nbsp; <a href="https://www.royal-hawaiian.com/dining/mai-tai-bar/" target="_blank" style="color:var(--gold-light)">Website</a></div>
+    </div>
+    <div class="mai-tai-card">
+      <div class="bar">House Without a Key</div>
+      <div class="location">Halekulani — Sunset Hula</div>
+      <div class="desc">Open-air beachfront, koi pond, nightly hula show at 6:30pm. Order the signature cocktail. The most romantic sunset in Waikiki.</div>
+      <div class="price">~$19–$25 / cocktail &nbsp;|&nbsp; <a href="https://www.halekulani.com/dining/house-without-a-key/" target="_blank" style="color:var(--gold-light)">Website</a></div>
+    </div>
+    <div class="mai-tai-card">
+      <div class="bar">Duke's Waikiki</div>
+      <div class="location">Waikiki Beach</div>
+      <div class="desc">Named for Duke Kahanamoku. Barefoot elegance, live music, Hula Pie for dessert. Classic Waikiki since 1970.</div>
+      <div class="price">~$16–$20 / Mai Tai &nbsp;|&nbsp; <a href="https://www.dukeswaikiki.com" target="_blank" style="color:var(--gold-light)">Website</a></div>
+    </div>
+    <div class="mai-tai-card">
+      <div class="bar">RumFire</div>
+      <div class="location">Sheraton Waikiki</div>
+      <div class="desc">Modern, panoramic ocean views, fire pits at sunset. Serious barrel-aged Mai Tai. One of the best cocktail programs in Hawaii.</div>
+      <div class="price">~$18–$24 / Mai Tai &nbsp;|&nbsp; <a href="https://www.sheratonwaikiki.com/rumfire" target="_blank" style="color:var(--gold-light)">Website</a></div>
+    </div>
+    <div class="mai-tai-card">
+      <div class="bar">Hau Tree Lanai</div>
+      <div class="location">Kailua — Off the Strip</div>
+      <div class="desc">The locals' secret. Beachfront, casual, under an old hau tree. Kailua town has a completely different vibe — worth the drive east.</div>
+      <div class="price">~$14–$18 / Mai Tai</div>
+    </div>
+    <div class="mai-tai-card">
+      <div class="bar">La Mariana</div>
+      <div class="location">Sand Island — Old Hawaii</div>
+      <div class="desc">A 1950s tiki bar hidden near Honolulu harbor. Fake flowers, outboard motor canoes on the wall. The real deal.</div>
+      <div class="price">~$13–$17 / Mai Tai &nbsp;|&nbsp; <a href="https://www.lamarian Honolulu.com" target="_blank" style="color:var(--gold-light)">Website</a></div>
+    </div>
+  </div>
+</div>
+
+<!-- VINTAGE NOTE -->
+<div class="vintage-note">
+  <h3>The Hawaii of Your Imagination</h3>
+  <p>This itinerary channels Waikiki's golden era — when the Royal Hawaiian was the only hotel on the beach that mattered, when Don Ho was playing every night, when a Mai Tai at the Mai Tai Bar was the most romantic thing you could do in America. We've swapped the package tours for real luaus, real hula, and real local food. The bones are the same. The feeling is timeless.</p>
+</div>
+
+<!-- DETAILS -->
+<div class="section" id="details">
+  <div class="section-header">
+    <div class="eyebrow">Everything Else</div>
+    <h2>Budget, Why September/October &amp; Packing List</h2>
+  </div>
+
+  <div style="max-width: 12in; margin: 0 auto;">
+
+    <!-- Budget Table -->
+    <div class="budget-table-wrap" style="margin-bottom: 0.35in;">
+      <table class="budget-table">
+        <thead>
+          <tr>
+            <th>Expense</th>
+            <th>Option A — Resort</th>
+            <th>Option B — Hotel + Restaurants</th>
+          </tr>
+        </thead>
+        <tbody style="font-size: 0.14in;">
+          <tr>
+            <td style="font-weight:600;color:var(--navy)">Flights (2 people, roundtrip)</td>
+            <td style="text-align:center;">$1,400–$1,800</td>
+            <td style="text-align:center;">$1,400–$1,800</td>
+          </tr>
+          <tr style="background:#faf7f2;">
+            <td style="font-weight:600;color:var(--navy)">Accommodation (7 nights)</td>
+            <td style="text-align:center;">$3,400</td>
+            <td style="text-align:center;">$2,400</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;color:var(--navy)">Food &amp; Drink (7 days)</td>
+            <td style="text-align:center;color:var(--teal)">$1,800 (resort)</td>
+            <td style="text-align:center;">$1,600</td>
+          </tr>
+          <tr style="background:#faf7f2;">
+            <td style="font-weight:600;color:var(--navy)">Activities &amp; Excursions</td>
+            <td style="text-align:center;">$700</td>
+            <td style="text-align:center;">$700</td>
+          </tr>
+          <tr>
+            <td style="font-weight:600;color:var(--navy)">Transfers, Tips &amp; Incidentals</td>
+            <td style="text-align:center;">$600</td>
+            <td style="text-align:center;">$500</td>
+          </tr>
+          <tr class="total-row">
+            <td>TOTAL (excl. flights)</td>
+            <td style="text-align:center;">~$8,000–$8,300</td>
+            <td style="text-align:center;color:var(--teal)">~$6,600–$7,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Why Sep/Oct -->
+    <div class="why-box">
+      <h4>Why September / October?</h4>
+      <p>Late September through October is Hawaii's shoulder season — summer crowds have thinned, prices drop 10–20% from peak, and the weather is still dry and warm (80s, low humidity). Ocean conditions are calmer than winter months. October means fewer crowds at Pearl Harbor, Hanauma Bay, and the best restaurants. Trade-off: tail end of hurricane season (officially ends November 1) — but direct-hit odds are very low. Book the Royal Hawaiian or Halekulani 3–4 months out for best rates.</p>
+    </div>
+
+    <!-- Packing -->
+    <div class="packing-grid">
+      <div class="packing-col">
+        <h4>Clothing</h4>
+        <ul>
+          <li>2–3 aloha shirts / linen shirts</li>
+          <li>1 dress-up dinner outfit</li>
+          <li>Swimsuit x 2 (rotate)</li>
+          <li>Light cover-up / rash guard</li>
+          <li>Sandals + walking shoes</li>
+          <li>Light rain jacket (quick-pass)</li>
+          <li>Aloha shirt for luau night</li>
+        </ul>
+      </div>
+      <div class="packing-col">
+        <h4>Activities</h4>
+        <ul>
+          <li>Reef-safe sunscreen (required!)</li>
+          <li>Snorkel gear (or rent on-site)</li>
+          <li>Waterproof phone case / GoPro</li>
+          <li>Insect repellent (North Shore)</li>
+          <li>Hiking shoes (Diamond Head)</li>
+          <li>Beach towel (resorts provide)</li>
+          <li>Ukulele (optional)</li>
+        </ul>
+      </div>
+      <div class="packing-col">
+        <h4>Essentials</h4>
+        <ul>
+          <li>Passport (REAL ID compliant)</li>
+          <li>Phone + car charger</li>
+          <li>Hotel confirmations (printed)</li>
+          <li>Travel insurance (recommended)</li>
+          <li>Credit cards (no FX fees)</li>
+          <li>Small cash for tips/shrimp trucks</li>
+          <li>Pearl Harbor tickets (recreation.gov)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RECOMMENDATION -->
+<div class="recommendation">
+  <div class="eyebrow">Our Recommendation</div>
+  <h2>For an Anniversary: Option A — The Royal Hawaiian</h2>
+  <p>An anniversary is a time to be spoiled, not to think. Option A's all-inclusive feel means you're never pulling out a credit card at lunch — you just show up, the resort handles it, and you focus on each other. The Mai Tai Bar at the Royal Hawaiian alone is worth it — it's the most romantic bar in the Pacific. Option B is better for food-lovers and repeat visitors who want to explore. For a special trip? The Pink Palace earns its legend.</p>
+</div>
+
+<!-- BUTTON TEST -->
+<div class="btn-test" id="buttons">
+  <h4>Quick Links — All Buttons</h4>
+  <div class="btn-group">
+    <a href="https://www.royal-hawaiian.com" target="_blank" class="btn btn-gold">Royal Hawaiian</a>
+    <a href="https://www.halekulani.com" target="_blank" class="btn btn-gold">Halekulani</a>
+    <a href="https://www.royal-hawaiian.com/dining/mai-tai-bar/" target="_blank" class="btn btn-outline">Mai Tai Bar</a>
+    <a href="https://www.halekulani.com/dining/house-without-a-key/" target="_blank" class="btn btn-outline">House Without a Key</a>
+    <a href="https://www.dukeswaikiki.com" target="_blank" class="btn btn-outline">Duke's Waikiki</a>
+    <a href="https://www.nps.gov/perm/planyourvisit/pearl-harbor-tickets.htm" target="_blank" class="btn btn-outline">Pearl Harbor Tickets</a>
+    <a href="https://www.germaineluau.com" target="_blank" class="btn btn-outline">Germaine's Luau</a>
+    <a href="https://www.sheratonwaikiki.com/rumfire" target="_blank" class="btn btn-outline">RumFire</a>
+    <a href="https://www.hanaumabaysnorkel.com" target="_blank" class="btn btn-outline">Hanauma Bay</a>
+  </div>
+</div>
+
+<footer>
+  <p>David &amp; Moriah — Hawaii Anniversary, September/October &nbsp;|&nbsp; All restaurant reservations: 2–4 weeks in advance</p>
+  <p style="margin-top:0.05in;">Pearl Harbor tickets: nps.gov/perm &nbsp;|&nbsp; Germaine's Luau: germaineluau.com</p>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<a href="#top" class="scroll-top" id="scrollTopBtn" title="Back to top">&#x2191;</a>
+
+<script>
+  // Tab navigation
+  function activateTab(el) {
+    document.querySelectorAll('.trip-tab').forEach(function(t) { t.classList.remove('active'); });
+    el.classList.add('active');
+  }
+
+  // Scroll spy for tabs
+  window.addEventListener('scroll', function() {
+    var sections = ['overview','option-a','option-b','maitais','details'];
+    var scrollPos = window.scrollY + 150;
+    var activeFound = false;
+    sections.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      var top = el.offsetTop;
+      var height = el.offsetHeight;
+      var link = document.querySelector('a[href="#' + id + '"]');
+      if (scrollPos >= top && scrollPos < top + height && !activeFound) {
+        document.querySelectorAll('.trip-tab').forEach(function(t) { t.classList.remove('active'); });
+        if (link) link.classList.add('active');
+        activeFound = true;
+      }
+    });
+
+    // Scroll to top button visibility
+    var btn = document.getElementById('scrollTopBtn');
+    if (window.scrollY > 300) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+
+  // Button click tracking (test)
+  document.querySelectorAll('.btn').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      var label = btn.textContent.trim();
+      if (console) console.log('Button clicked:', label, '->', btn.href || btn.getAttribute('onclick') || 'internal');
+    });
+  });
+
+  // Test: verify all external links are reachable
+  var links = [];
+  document.querySelectorAll('a[target="_blank"]').forEach(function(a) {
+    links.push({ text: a.textContent.trim(), href: a.href });
+  });
+  console.log('Total external links:', links.length);
+  links.forEach(function(l) { console.log(' -', l.text, ':', l.href); });
+</script>
+
+</body>
+</html>
